@@ -64,6 +64,7 @@ export class AppComponent implements AfterViewInit{
 		}, 10);
 	}
 
+	// Overlay button event
 	onMenuButtonClick(event){
 		this.rotateMenuButton = !this.rotateMenuButton;
 		this.topbarMenuActive = false;
@@ -106,6 +107,7 @@ export class AppComponent implements AfterViewInit{
 	}
 
 	onTopbarItemClick(event, item){
+		console.log("onTopbarbarItemClick" + item);
 		this.topbarItemClick = true;
 
 		if (this.activeTopbarItem === item)

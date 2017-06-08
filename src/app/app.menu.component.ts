@@ -17,7 +17,8 @@ export class AppMenuComponent implements OnInit {
 
     model: any[];
 
-    constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent) {}
+    constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent) {
+    }
     
     ngOnInit() {
         this.model = [

@@ -6,17 +6,23 @@ import {AppComponent} from './app.component';
     template: `
         <div class="topbar clearfix">
             <div class="topbar-left">            
-                <div class="logo"></div>
+                <div class="logo">Edu-EMR</div>
             </div>
-
+		   
+		   
             <div class="topbar-right">
+			  
                 <a id="menu-button" href="#" (click)="app.onMenuButtonClick($event)">
                     <i></i>
                 </a>
-                
+			  <!--Overlay menu button-->
                 <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
                     <i class="material-icons">menu</i>
                 </a>
+
+			  <label>Patient name:</label>
+			  
+			  <!-- Top Profile menu items, if app.profileMode==='top is at top-->
                 <ul class="topbar-items animated fadeInDown" [ngClass]="{'topbar-items-visible': app.topbarMenuActive}">
                     <li #profile class="profile-item" *ngIf="app.profileMode==='top'||app.isHorizontal()"
                         [ngClass]="{'active-top-menu':app.activeTopbarItem === profile}">
@@ -53,6 +59,7 @@ import {AppComponent} from './app.component';
                             </li>
                         </ul>
                     </li>
+				 <!-- Settings menu items-->
                     <li #settings [ngClass]="{'active-top-menu':app.activeTopbarItem === settings}">
                         <a href="#" (click)="app.onTopbarItemClick($event,settings)"> 
                             <i class="topbar-icon material-icons">settings</i>
@@ -61,13 +68,13 @@ import {AppComponent} from './app.component';
                         <ul class="ultima-menu animated fadeInDown">
                             <li role="menuitem">
                                 <a href="#">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">palette</i> <!-- icon -->
                                     <span>Change Theme</span>
                                 </a>
                             </li>
                             <li role="menuitem">
                                 <a href="#">
-                                    <i class="material-icons">favorite_border</i>
+                                    <i class="material-icons">exposure_neg_1</i>
                                     <span>Favorites</span>
                                 </a>
                             </li>
@@ -85,6 +92,7 @@ import {AppComponent} from './app.component';
                             </li>
                         </ul>
                     </li>
+				 <!-- Messages menu items -->
                     <li #messages [ngClass]="{'active-top-menu':app.activeTopbarItem === messages}">
                         <a href="#" (click)="app.onTopbarItemClick($event,messages)"> 
                             <i class="topbar-icon material-icons animated swing">message</i>
@@ -124,6 +132,7 @@ import {AppComponent} from './app.component';
                             </li>
                         </ul>
                     </li>
+				 <!-- Notification menu items-->
                     <li #notifications [ngClass]="{'active-top-menu':app.activeTopbarItem === notifications}">
                         <a href="#" (click)="app.onTopbarItemClick($event,notifications)"> 
                             <i class="topbar-icon material-icons">timer</i>
@@ -157,14 +166,23 @@ import {AppComponent} from './app.component';
                             </li>
                         </ul>
                     </li>
-                    <li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}"
+
+				 <li #facemsg [ngClass]="{'active-top-menu':app.activeTopbarItem === facemsg}">
+					 <a href="#" (click)="app.onTopbarItemClick($event,facemsg)">
+						 <i class="topbar-icon material-icons">face</i>
+						<!-- <span class="topbar-badge animated rubberBand"></span>
+						 <span class="topbar-item-name">Notifications</span>-->
+					 </a>
+				 </li>
+				 <!-- Search -->
+                    <!--<li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}"
                         (click)="app.onTopbarItemClick($event,search)">
                         <span class="md-inputfield">
                             <input type="text" pInputText>
                             <label>Search</label>
                             <i class="topbar-icon material-icons">search</i>
                         </span>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
