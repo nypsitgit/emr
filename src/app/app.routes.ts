@@ -16,7 +16,8 @@ import {UtilsDemo} from './demo/view/utilsdemo';
 import {Documentation} from './demo/view/documentation';
 
 export const routes: Routes = [
-    {path: '', component: DashboardDemo},
+	{path: '', component: EmptyDemo},
+    {path: 'dashboard', component: DashboardDemo},
     {path: 'sample', component: SampleDemo},
     {path: 'forms', component: FormsDemo},
     {path: 'data', component: DataDemo},

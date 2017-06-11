@@ -5436,7 +5436,8 @@ body {
     body .ui-messages.ui-messages-info {
       background-color: #2196F3;
       border-color: #2196F3;
-      color: #ffffff; }
+      color: #ffffff;
+      }
     body .ui-messages.ui-messages-warn {
       background-color: #ffc107;
       border-color: #ffc107;
