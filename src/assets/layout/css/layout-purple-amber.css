@@ -52,6 +52,19 @@
 	display: none;
 }
 
+.mycard {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background: #673AB7;
+	padding: 1em;
+	margin-bottom: 1em;
+	box-sizing: border-box;
+}
+
 .card {
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -1319,13 +1332,86 @@ body a {
 
 .layout-container .topbar {
 	position: fixed;
-	z-index: 100;
+	z-index: 200;
 	width: 100%;
 	height: 75px;
 	background-color: #673AB7;
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+/*
+.layout-container .topbar .patient-info{
+	display: inline-block;
+	color: #ffffff;
+	text-align: left;
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	width: 800px;
+}*/
+
+.city {
+	position: relative;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	/*width: 1000px; *//*This is the problem!!!*/
+	/*max-width: 1200px;*/
+	height: 300px;
+	color: #ff1b2c
+	/*border: 1px solid black;*/
+}
+
+.test-bar {
+	/*display: inline-block*/;
+	width: 1200px;
+	height: 65px;
+	/*opacity: 0.1;*/
+	padding-left: 20px;
+	padding-top: 10px;
+	position: relative;
+	margin:0 auto;
+	/*margin-left: 10px;*/
+	/*vertical-align: middle;*/
+	/*text-align: left;*/
+	/*color: #ffffff;*/
+	/*background-color: #fcfaff;*/
+}
+
+
+.mycard {
+/*	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;*/
+	position: fixed;
+	left: 275px;
+	background: #673AB7;
+	padding-left: 15px;
+	padding-top: 25px;
+	z-index: 300;
+	/*border-radius: 1px;
+	padding: 1em;
+	margin-bottom: 1em;*/
+	color: #ffffff;
+	/*box-sizing: border-box;*/
+}
+
+.patient-bar {
+	position: fixed;
+	left: 275px;
+	float: left;
+	/*width: 1075px;*/
+	max-width: 800px;
+	height: 45px;
+	opacity: 0.9;
+	padding-left: 15px;
+	padding-top: 25px;
+	color: #ffffff;
+	z-index: 300;
+	/*background-color: #ff9792;*/
 }
 
 .layout-container .topbar .logo {
@@ -1347,16 +1433,6 @@ body a {
 	-webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
 	box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.layout-container .topbar .patient-info{
-	display: inline-block;
-	color: #ffffff;
-	text-align: left;
-	float: left;
-	margin-left: 50px;
-	margin-top: 20px;
-	width: 800px;
 }
 
 .layout-container .topbar .topbar-right {
@@ -1443,7 +1519,6 @@ body a {
 .layout-container .topbar .topbar-right #topbar-menu-button {
 	display: none;
 	color: #ffffff;
-	/*vertical-align: middle;*/
 	height: 36px;
 	position: absolute;
 	top: 20px;

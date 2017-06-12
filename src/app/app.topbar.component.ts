@@ -4,19 +4,11 @@ import { AppComponent } from './app.component';
 @Component({
 	selector: 'app-topbar',
 	styleUrls: [ './app-topbar.css' ],
-	template: `
+	template: `		
+		
 		<div class="topbar clearfix">
 			<div class="topbar-left">
 				<div class="logo"></div>
-			</div>
-
-			<div class="patient-info">
-				<!--Wong Ah Ying | S1234567F | 65 | Blood O-->
-				<div class="ui-g">
-					<div class="ui-g-4">Wong Ah Ying</div>
-					<div class="ui-g-4">S1234567A</div>
-					<div class="ui-g-4">65</div>
-				</div>
 			</div>
 
 
@@ -209,6 +201,22 @@ import { AppComponent } from './app.component';
 				</div>-->
 			</div>
 		</div>
+
+		<div class="patient-bar">
+			<!--<div class="mycard">-->
+			Name: Wong Ah Ying || NRIC: S1234567F || Age: 65 || Blood Group: O || Female
+			<!--Name: Wong Ah Ying || NRIC: S1234567F || Age: 65 || Blood Group: O || Female-->
+			<!--<div class="ui-g">
+				<div class="ui-g-2">Wong Ah Ying</div>
+				&lt;!&ndash;<div class="ui-g-12 ui-md-6 ui-lg-12">||</div>&ndash;&gt;
+				<div class="ui-g-2">S1234567A</div>
+				<div class="ui-g-2">65</div>
+				<div class="ui-g-2">173cm</div>
+				<div class="ui-g-2">65kg</div>
+				<div class="ui-g-2">Blood O</div>
+			</div>-->
+		</div>
+		
 	`
 })
 export class AppTopBar{
