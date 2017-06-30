@@ -94,6 +94,7 @@ export class AppComponent implements AfterViewInit{
 	}
 
 	onTopbarMenuButtonClick(event){
+		console.log("3-bar button clicked!!")
 		this.topbarItemClick = true;
 		this.topbarMenuActive = !this.topbarMenuActive;
 

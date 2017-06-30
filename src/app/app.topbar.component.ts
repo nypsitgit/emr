@@ -1,5 +1,6 @@
-import { Component, Inject, forwardRef } from '@angular/core';
+import { Component,  OnInit, Inject, forwardRef } from '@angular/core';
 import { AppComponent } from './app.component';
+import {MenuItem} from 'primeng/primeng';
 
 @Component({
 	selector: 'app-topbar',
@@ -19,19 +20,18 @@ import { AppComponent } from './app.component';
 					<i></i>
 				</a>
 
-<!-- Bar menu shown when app window is resized smaller
-				
+<!-- 3-bar menu shown when app window is resized smaller-->
 				<a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
 					<i class="material-icons">menu</i>
 				</a>
--->
+
 
 
 				<!-- Menu items, if app.profileMode ==='top is at top-->
-<!--
 				<ul class="topbar-items animated fadeInDown" [ngClass]="{'topbar-items-visible': app.topbarMenuActive}">
 
-					&lt;!&ndash;User Profile button&ndash;&gt;
+					<!--User Profile button-->
+	<!--				
 					<li #profile class="profile-item" *ngIf="app.profileMode==='top'||app.isHorizontal()"
 					    [ngClass]="{'active-top-menu':app.activeTopbarItem === profile}">
 
@@ -67,7 +67,9 @@ import { AppComponent } from './app.component';
 							</li>
 						</ul>
 					</li>
-					&lt;!&ndash; Settings menu items&ndash;&gt;
+	-->
+					<!-- Settings menu items-->
+<!--					
 					<li #settings [ngClass]="{'active-top-menu':app.activeTopbarItem === settings}">
 						<a href="#" (click)="app.onTopbarItemClick($event,settings)">
 							<i class="topbar-icon material-icons">settings</i>
@@ -100,44 +102,49 @@ import { AppComponent } from './app.component';
 							</li>
 						</ul>
 					</li>
+-->
+
+					
+					<!--Switch to horizontal view-->
+					<li #messages [ngClass]="{'active-top-menu':app.activeTopbarItem === horizontalMsg}">
+						<!--<a href="#" (click)="app.onTopbarItemClick($event,horizontalMsg)">
+							<i class="topbar-icon material-icons animated swing">border_horizontal</i>
+						</a>-->
+
+						<a href="#" (click)="app.changeToHorizontalMenu();">
+							<i class="topbar-icon material-icons animated swing">border_horizontal</i>
+						</a>
+					</li>
+
+<!--
+					
 					&lt;!&ndash; Messages menu items &ndash;&gt;
 					<li #messages [ngClass]="{'active-top-menu':app.activeTopbarItem === messages}">
 						<a href="#" (click)="app.onTopbarItemClick($event,messages)">
 							<i class="topbar-icon material-icons animated swing">message</i>
-							<span class="topbar-badge animated rubberBand">5</span>
+							<span class="topbar-badge animated rubberBand">3</span>
 							<span class="topbar-item-name">Messages</span>
 						</a>
 						<ul class="ultima-menu animated fadeInDown">
 							<li role="menuitem">
 								<a href="#" class="topbar-message">
 									<img src="assets/layout/images/avatar1.png" width="35"/>
-									<span>Give me a call</span>
+									<span>Temperature taken</span>
 								</a>
 							</li>
 							<li role="menuitem">
 								<a href="#" class="topbar-message">
 									<img src="assets/layout/images/avatar2.png" width="35"/>
-									<span>Sales reports attached</span>
+									<span>Call to discuss patient</span>
 								</a>
 							</li>
 							<li role="menuitem">
 								<a href="#" class="topbar-message">
 									<img src="assets/layout/images/avatar3.png" width="35"/>
-									<span>About your invoice</span>
+									<span>Make the bed</span>
 								</a>
 							</li>
-							<li role="menuitem">
-								<a href="#" class="topbar-message">
-									<img src="assets/layout/images/avatar2.png" width="35"/>
-									<span>Meeting today at 10pm</span>
-								</a>
-							</li>
-							<li role="menuitem">
-								<a href="#" class="topbar-message">
-									<img src="assets/layout/images/avatar4.png" width="35"/>
-									<span>Out of office</span>
-								</a>
-							</li>
+							
 						</ul>
 					</li>
 					&lt;!&ndash; Notification menu items&ndash;&gt;
@@ -151,7 +158,7 @@ import { AppComponent } from './app.component';
 							<li role="menuitem">
 								<a href="#">
 									<i class="material-icons">bug_report</i>
-									<span>Pending tasks</span>
+									<span>Admin medicine at 2pm</span>
 								</a>
 							</li>
 							<li role="menuitem">
@@ -163,7 +170,7 @@ import { AppComponent } from './app.component';
 							<li role="menuitem">
 								<a href="#">
 									<i class="material-icons">file_download</i>
-									<span>Download documents</span>
+									<span>Change drip</span>
 								</a>
 							</li>
 							<li role="menuitem">
@@ -174,27 +181,31 @@ import { AppComponent } from './app.component';
 							</li>
 						</ul>
 					</li>
+-->
 
+					<!--Face Icon-->
+<!--
+					
 					<li #facemsg [ngClass]="{'active-top-menu':app.activeTopbarItem === facemsg}">
 						<a href="#" (click)="app.onTopbarItemClick($event,facemsg)">
 							<i class="topbar-icon material-icons">face</i>
-							&lt;!&ndash; <span class="topbar-badge animated rubberBand"></span>
-							 <span class="topbar-item-name">Notifications</span>&ndash;&gt;
+							 <span class="topbar-badge animated rubberBand">XX</span>
+							 <span class="topbar-item-name">Notifications</span>
 						</a>
 					</li>
+-->
 
 
-					&lt;!&ndash; Search &ndash;&gt;
-					<li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}"
+					<!-- Search -->
+				<!--	<li #search class="search-item" [ngClass]="{'active-top-menu':app.activeTopbarItem === search}"
 					    (click)="app.onTopbarItemClick($event,search)">
 					    <span class="md-inputfield">
 						   <input type="text" pInputText>
 						   <label>Search</label>
 						   <i class="topbar-icon material-icons">search</i>
 					    </span>
-					</li>
+					</li>-->
 				</ul>
--->
 
 				<!--<div class="ui-g">
 					<div class="ui-g-4"><span class="patientInfo">Wong Ah Ying</span></div>
@@ -204,26 +215,23 @@ import { AppComponent } from './app.component';
 			</div>
 		</div>
 
+	
 		<div class="patient-bar">
-			<!--<div class="mycard">-->
-			Name: Wong Ah Ying || NRIC: S1234567F || Age: 65 || Blood Group: O || Female
-			<!--Name: Wong Ah Ying || NRIC: S1234567F || Age: 65 || Blood Group: O || Female-->
-			<!--<div class="ui-g">
-				<div class="ui-g-2">Wong Ah Ying</div>
-				&lt;!&ndash;<div class="ui-g-12 ui-md-6 ui-lg-12">||</div>&ndash;&gt;
-				<div class="ui-g-2">S1234567A</div>
-				<div class="ui-g-2">65</div>
-				<div class="ui-g-2">173cm</div>
-				<div class="ui-g-2">65kg</div>
-				<div class="ui-g-2">Blood O</div>
-			</div>-->
+			Wong Ah Ying | S1234567F | Female | 160cm | 51kg
 		</div>
 
 	`
 })
-export class AppTopBar{
+export class AppTopBar implements OnInit{
+
+	breadcrumbItems: MenuItem[];
 
 	constructor(@Inject(forwardRef(() => AppComponent)) public app: AppComponent){
 	}
 
+	ngOnInit(){
+		this.breadcrumbItems = [];
+		this.breadcrumbItems.push({label:'Patient'});
+		this.breadcrumbItems.push({label:'Biographic Data'});
+	}
 }

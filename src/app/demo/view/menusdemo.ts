@@ -13,17 +13,11 @@ import {MenuItem} from 'primeng/primeng';
 export class MenusDemo implements OnInit {
 
     breadcrumbItems: MenuItem[];
-    
     tieredItems: MenuItem[];
-    
     items: MenuItem[];
-    
     tabMenuItems: MenuItem[];
-    
     megaMenuItems: MenuItem[];
-    
     panelMenuItems: MenuItem[];
-    
     stepsItems: MenuItem[];
 
     ngOnInit() {

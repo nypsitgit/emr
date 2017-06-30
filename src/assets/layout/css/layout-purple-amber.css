@@ -1404,7 +1404,7 @@ body a {
 	left: 275px;
 	float: left;
 	/*width: 1075px;*/
-	max-width: 800px;
+	max-width: 500px;
 	height: 45px;
 	opacity: 0.9;
 	padding-left: 15px;
@@ -1962,7 +1962,7 @@ body a {
 	}
 
 	.layout-container .topbar-items > li .topbar-icon {
-		font-size: 36px;
+		font-size: 24px;
 		color: #ffffff;
 		-moz-transition: color 0.3s;
 		-o-transition: color 0.3s;
