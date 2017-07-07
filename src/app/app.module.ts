@@ -98,6 +98,10 @@ import { NodeService } from './demo/service/nodeservice';
 
 import { BiographyComponent } from './patient/biography.component';
 
+import { ScrollToModule } from 'ng2-scroll-to';
+import { MainComponent } from './main-content/main.component';
+import { ContentComponent } from './main-content/content/content.component';
+import { TopMenuComponent } from './main-content/top-menu/top-menu.component';
 
 @NgModule({
 	imports: [
@@ -168,7 +172,8 @@ import { BiographyComponent } from './patient/biography.component';
 		ToolbarModule,
 		TooltipModule,
 		TreeModule,
-		TreeTableModule
+		TreeTableModule,
+		ScrollToModule
 	],
 	declarations: [
 		AppComponent,
@@ -192,7 +197,10 @@ import { BiographyComponent } from './patient/biography.component';
 		FileDemo,
 		UtilsDemo,
 		Documentation,
-		BiographyComponent
+		BiographyComponent,
+		MainComponent,
+		ContentComponent,
+		TopMenuComponent
 
 	],
 	providers: [

@@ -1340,16 +1340,19 @@ body a {
 	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
-/*
-.layout-container .topbar .patient-info{
-	display: inline-block;
-	color: #ffffff;
+
+.layout-container .topbar .patient-bar {
+	position: absolute;
+	top: 0;
+	left: 280px;
 	text-align: left;
-	float: left;
-	margin-left: 50px;
-	margin-top: 20px;
-	width: 800px;
-}*/
+	padding-top: 20px;
+	max-width: 600px;
+	height: 50px;
+	opacity: 0.9;
+	color: #ffffff;
+	border: solid;
+}
 
 .city {
 	position: relative;
@@ -1363,56 +1366,6 @@ body a {
 	/*border: 1px solid black;*/
 }
 
-.test-bar {
-	/*display: inline-block*/;
-	width: 1200px;
-	height: 65px;
-	/*opacity: 0.1;*/
-	padding-left: 20px;
-	padding-top: 10px;
-	position: relative;
-	margin:0 auto;
-	/*margin-left: 10px;*/
-	/*vertical-align: middle;*/
-	/*text-align: left;*/
-	/*color: #ffffff;*/
-	/*background-color: #fcfaff;*/
-}
-
-
-.mycard {
-/*	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;*/
-	position: fixed;
-	left: 275px;
-	background: #673AB7;
-	padding-left: 15px;
-	padding-top: 25px;
-	z-index: 300;
-	/*border-radius: 1px;
-	padding: 1em;
-	margin-bottom: 1em;*/
-	color: #ffffff;
-	/*box-sizing: border-box;*/
-}
-
-.patient-bar {
-	position: fixed;
-	left: 275px;
-	float: left;
-	/*width: 1075px;*/
-	max-width: 500px;
-	height: 45px;
-	opacity: 0.9;
-	padding-left: 15px;
-	padding-top: 25px;
-	color: #ffffff;
-	z-index: 300;
-	/*background-color: #ff9792;*/
-}
 
 .layout-container .topbar .logo {
 	display: inline-block;

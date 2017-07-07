@@ -23,10 +23,15 @@ export class BiographyComponent implements OnInit{
 		this.types.push({ label: 'Information Source', value: 'infoSource', url: '#second' });
 
 		this.tabMenuItems = [
-			{label: 'Biographic Data', url: '#first'},
-			{label: 'Psycho-Social & Economic', url: '#second'},
-			{label: 'Emergency Contact', icon: 'ui-icon-book', url: '#third'},
-			{label: 'Information Source', icon: 'ui-icon-help-outline'},
+			{label: 'Biographic Data', command: (event) => { this.menuClick();}},
+			{label: 'Psycho-Social & Economic', url: '#scroll-pos'},
+			{label: 'Emergency Contact',  url: '#scroll-pos'},
+			{label: 'Information Source',},
 		];
+	}
+
+
+	menuClick(){
+		console.log("Menu clicked")
 	}
 }

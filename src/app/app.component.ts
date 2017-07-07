@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ElementRef, Renderer, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
 
 enum MenuOrientation {
 	STATIC,
@@ -40,6 +41,8 @@ export class AppComponent implements AfterViewInit{
 	constructor(public renderer: Renderer){
 	}
 
+
+
 	ngAfterViewInit(){
 		this.layoutContainer = <HTMLDivElement> this.layourContainerViewChild.nativeElement;
 		this.layoutMenuScroller = <HTMLDivElement> this.layoutMenuScrollerViewChild.nativeElement;
@@ -57,11 +60,13 @@ export class AppComponent implements AfterViewInit{
 
 			this.topbarItemClick = false;
 			this.menuClick = false;
+			//console.log("Universal click listener....");
 		});
 
 		setTimeout(() =>{
 			jQuery(this.layoutMenuScroller).nanoScroller({ flash: true });
 		}, 10);
+
 	}
 
 	// Overlay button event

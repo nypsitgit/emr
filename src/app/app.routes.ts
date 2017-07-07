@@ -15,10 +15,14 @@ import { FileDemo } from './demo/view/filedemo';
 import { UtilsDemo } from './demo/view/utilsdemo';
 import { Documentation } from './demo/view/documentation';
 import { BiographyComponent } from './patient/biography.component';
+import { MainComponent } from './main-content/main.component';
+import { ContentComponent } from './main-content/content/content.component';
+import { TopMenuComponent } from './main-content/top-menu/top-menu.component';
+
 
 export const routes: Routes = [
-	{ path: '', component: BiographyComponent },
-	{ path: 'dashboard', component: DashboardDemo },
+	{ path: '', component: MainComponent },
+	{ path: 'dashboard', component: MainComponent },
 	{ path: 'sample', component: SampleDemo },
 	{ path: 'forms', component: FormsDemo },
 	{ path: 'data', component: DataDemo },
@@ -33,6 +37,13 @@ export const routes: Routes = [
 	{ path: 'utils', component: UtilsDemo },
 	{ path: 'documentation', component: Documentation },
 	{ path: 'biography', component: BiographyComponent },
+	{ path: 'mainPage', component: MainComponent,
+		children: [
+			{ path: 'topMenuPath', component: TopMenuComponent, outlet: 'topMenu-outlet' },
+			{ path: 'contentPath', component: ContentComponent, outlet: 'content-outlet' },
+			{ path: 'biography', component: BiographyComponent, outlet: 'biography-outlet' }
+		]
+	}
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes);
