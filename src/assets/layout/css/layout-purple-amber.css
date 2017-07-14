@@ -1346,12 +1346,12 @@ body a {
 	top: 0;
 	left: 280px;
 	text-align: left;
-	padding-top: 20px;
+	padding-top: 25px;
 	max-width: 600px;
 	height: 50px;
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 	color: #ffffff;
-	border: solid;
+	/*border: solid;*/
 }
 
 .city {

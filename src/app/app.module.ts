@@ -95,12 +95,12 @@ import { CarService } from './demo/service/carservice';
 import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
+import { BiographyMenuService } from './patient/biography-menu-service';
 
 import { BiographyComponent } from './patient/biography.component';
 
 import { ScrollToModule } from 'ng2-scroll-to';
 import { MainComponent } from './main-content/main.component';
-import { ContentComponent } from './main-content/content/content.component';
 import { TopMenuComponent } from './main-content/top-menu/top-menu.component';
 
 @NgModule({
@@ -199,13 +199,12 @@ import { TopMenuComponent } from './main-content/top-menu/top-menu.component';
 		Documentation,
 		BiographyComponent,
 		MainComponent,
-		ContentComponent,
 		TopMenuComponent
 
 	],
 	providers: [
 		{ provide: LocationStrategy, useClass: HashLocationStrategy },
-		CarService, CountryService, EventService, NodeService
+		CarService, CountryService, EventService, NodeService, BiographyMenuService
 	],
 	bootstrap: [ AppComponent ]
 })

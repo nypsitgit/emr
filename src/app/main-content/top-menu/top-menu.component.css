@@ -1,0 +1,10 @@
+.contentMenu{
+	position: fixed;
+	width: 100%;
+	top: 70px;
+	left: 250px;
+	padding-left: 30px;
+	background-color: #f5f5f5;
+	color: #673AB7;
+	z-index: 1;
+}

@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {MenuItem} from 'primeng/primeng';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/primeng';
+
 
 @Component({
-    templateUrl: './biography.html'
+	templateUrl: './biography.html',
+	styleUrls: ['./biography-component.css']
 })
 export class BiographyComponent implements OnInit{
 
@@ -12,8 +14,8 @@ export class BiographyComponent implements OnInit{
 
 	ngOnInit(){
 		this.breadcrumbItems = [];
-		this.breadcrumbItems.push({label:'Patient'});
-		this.breadcrumbItems.push({label:'Biographic Data'});
+		this.breadcrumbItems.push({ label: 'Patient' });
+		this.breadcrumbItems.push({ label: 'Biographic Data' });
 
 
 		this.types = [];
@@ -23,10 +25,14 @@ export class BiographyComponent implements OnInit{
 		this.types.push({ label: 'Information Source', value: 'infoSource', url: '#second' });
 
 		this.tabMenuItems = [
-			{label: 'Biographic Data', command: (event) => { this.menuClick();}},
-			{label: 'Psycho-Social & Economic', url: '#scroll-pos'},
-			{label: 'Emergency Contact',  url: '#scroll-pos'},
-			{label: 'Information Source',},
+			{
+				label: 'Biographic Data', command: (event) =>{
+				this.menuClick();
+			}
+			},
+			{ label: 'Psycho-Social & Economic', url: '#scroll-pos' },
+			{ label: 'Emergency Contact', url: '#scroll-pos' },
+			{ label: 'Information Source', },
 		];
 	}
 

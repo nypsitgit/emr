@@ -16,7 +16,6 @@ import { UtilsDemo } from './demo/view/utilsdemo';
 import { Documentation } from './demo/view/documentation';
 import { BiographyComponent } from './patient/biography.component';
 import { MainComponent } from './main-content/main.component';
-import { ContentComponent } from './main-content/content/content.component';
 import { TopMenuComponent } from './main-content/top-menu/top-menu.component';
 
 
@@ -36,11 +35,10 @@ export const routes: Routes = [
 	{ path: 'file', component: FileDemo },
 	{ path: 'utils', component: UtilsDemo },
 	{ path: 'documentation', component: Documentation },
-	{ path: 'biography', component: BiographyComponent },
+	{ path: 'biography', component: MainComponent },
 	{ path: 'mainPage', component: MainComponent,
 		children: [
 			{ path: 'topMenuPath', component: TopMenuComponent, outlet: 'topMenu-outlet' },
-			{ path: 'contentPath', component: ContentComponent, outlet: 'content-outlet' },
 			{ path: 'biography', component: BiographyComponent, outlet: 'biography-outlet' }
 		]
 	}

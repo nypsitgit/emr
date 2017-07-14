@@ -1,0 +1,8 @@
+{
+	"data": [
+		{"section": "General Information", "shortcut": "#generalInfo"},
+		{"section": "Psycho-Social & Economic", "shortcut": "#psycho-social"},
+		{"section": "Emergency Contact", "shortcut": "#emergencyContact"},
+		{"section": "Information Source", "shortcut": "#infoSource"}
+	]
+}
